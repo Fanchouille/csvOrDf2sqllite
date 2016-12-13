@@ -24,7 +24,7 @@ class Data2SqlliteLoader:
             db_path = os.getcwd()
         else:
             db_path = iDbPath
-        disk_engine = create_engine('sqlite://' + db_path + '/' + iDbName + '.db')
+        disk_engine = create_engine('sqlite:///' + db_path + '/' + iDbName + '.db')
         iDf.to_sql(iTableName, disk_engine, index=iIndex, if_exists=iIf_exists)
         return
 
